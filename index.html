@@ -47,9 +47,13 @@
       <section id="transaction">
         <h2 class="sr-only">Transações</h2>
 
-        <a href="#" onclick="Modal.open()" class="button new"
-          >+ Nova Transação</a
-        >
+        <div class="transaction-type">
+          <a href="#" onclick="Modal.open(`${'income'}`)" id="incomes"
+            >+ Adicionar Entrada</a
+          >
+          <a href="#" onclick="Modal.open(`${'expense'}`)" id="expenses"
+            >- Adicionar Saída</a>
+        </div>
 
         <table id="data-table">
           <thead>
@@ -91,10 +95,10 @@
               />
             </div>
 
-            <small class="help">
+            <!-- <small class="help">
               Use o sinal - (negativo) para despesas e , (vírgula) para casas
               decimais
-            </small>
+            </small> -->
 
             <div class="input-group">
               <label class="sr-only" for="date">Data</label>

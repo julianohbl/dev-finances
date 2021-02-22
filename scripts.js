@@ -1,6 +1,8 @@
 const Modal = {
-  open() {
+  transactionType: "",
+  open(value) {
     document.querySelector(".modal-overlay").classList.add("active");
+    this.transactionType = value;
   },
 
   close() {
@@ -107,6 +109,11 @@ const DOM = {
 const Utils = {
   formatAmount(value) {
     value = Number(value.replace(/\,\./g, "")) * 100;
+
+    transactionType = Modal.transactionType;
+    if (transactionType === "expense" && value >= 0) {
+      value *= -1;
+    }
 
     return value;
   },

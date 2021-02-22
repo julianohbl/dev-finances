@@ -4,6 +4,7 @@
   --green: #49aa26;
   --light-green: #3dd705;
   --red: #e92929;
+  --dark-red: #aa3030;
 }
 
 * {
@@ -72,7 +73,6 @@ button {
 
 button:hover {
   background: var(--light-green);
-
 }
 
 .button.new {
@@ -80,7 +80,23 @@ button:hover {
   margin-bottom: 0.8rem;
 }
 
-.button.cancel{
+#expenses {
+  color: var(--dark-red);
+}
+
+#expenses:hover {
+  color: var(--red);
+}
+
+#incomes {
+  color: var(--green);
+}
+
+#incomes:hover {
+  color: var(--light-green)
+}
+
+.button.cancel {
   color: var(--red);
   border: 2px var(--red) solid;
   border-radius: 0.25rem;
@@ -152,10 +168,18 @@ header {
 }
 
 /* Table===================== */
+
 #transaction {
   display: block;
   overflow-x: auto;
   width: 100%;
+}
+
+.transaction-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 #data-table {
@@ -235,6 +259,8 @@ td.expense {
   background: #f0f2f5;
   padding: 2.4rem;
 
+  width: 35rem;
+
   position: relative;
   z-index: 1;
 }
@@ -257,9 +283,9 @@ td.expense {
   width: 100%;
 }
 
-.input-group .help {
+/* .input-group .help {
   opacity: 0.4;
-}
+} */
 
 .input-group {
   margin-top: 0.8rem;
